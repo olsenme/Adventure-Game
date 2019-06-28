@@ -1,15 +1,15 @@
 A simple game akin to old text adventure games like Adventure:
 
 <h1>Overview</h1>
-This project is split up into two programs. The first program (hereafter called the "rooms program") will be contained in a file named "<STUDENT ONID USERNAME>.buildrooms.c", which when compiled with the same name (minus the extension) and run creates a series of files that hold descriptions of the in-game rooms and how the rooms are connected.
-The second program (hereafter called the "game") will be called "<STUDENT ONID USERNAME>.adventure.c" and when compiled with the same name (minus the extension) and run provides an interface for playing the game using the previously generated rooms.
+This project is split up into two programs. The first program (hereafter called the "rooms program") is contained in a file named "<STUDENT ONID USERNAME>.buildrooms.c", which when compiled with the same name (minus the extension) and run creates a series of files that hold descriptions of the in-game rooms and how the rooms are connected.
+The second program (hereafter called the "game") is called "<STUDENT ONID USERNAME>.adventure.c" and when compiled with the same name (minus the extension) and run provides an interface for playing the game using the previously generated rooms.
 In the game, the player will begin in the "starting room" and will win the game automatically upon entering the "ending room", which causes the game to exit, displaying the path taken by the player.
 During the game, the player can also enter a command that returns the current time - this functionality utilizes mutexes and multithreading.
-Specifications 
-Rooms Program
-The first thing your rooms program must do is generate 7 different room files, one room per file, in a directory called "<STUDENT ONID USERNAME>.rooms.<PROCESS ID>". You get to pick the names for those files, which should be hard-coded into your program. For example, the directory, if John Smith was writing the program, should be hard-coded (except for the process id number) as:
+ <h1>Specifications</h1> 
+ <h2>Rooms Program</h2>
+The first thing the rooms program does is generate 7 different room files, one room per file, in a directory called "<STUDENT ONID USERNAME>.rooms.<PROCESS ID>". The names of those files match the room names, which represent medieval room names For example, the directory, if John Smith was writing the program, should be hard-coded (except for the process id number) as:
 smithj.rooms.19903
-Each room has a Room Name, at least 3 outgoing connections (and at most 6 outgoing connections, where the number of outgoing connections is random) from this room to other rooms, and a room type. The connections from one room to the others should be randomly assigned – i.e. which rooms connect to each other one is random - but note that if room A connects to room B, then room B must have a connection back to room A. Because of these specs, there will always be at least one path through. Note that a room cannot connect to itself.
+Each room has a Room Name, at least 3 outgoing connections (and at most 6 outgoing connections, where the number of outgoing connections is random) from this room to other rooms, and a room type. The connections from one room to the others is randomly assigned – i.e. which rooms connect to each other one is random - but note that if room A connects to room B, then room B must have a connection back to room A. Because of these specs, there will always be at least one path through. Note that a room cannot connect to itself.
 Each file that stores a room must have exactly this form, where the … is additional room connections, as randomly generated:
 ROOM NAME: <room name>
 CONNECTION 1: <room name>
