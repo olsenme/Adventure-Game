@@ -1,5 +1,5 @@
 A simple game akin to old text adventure games like Adventure:
-Instruction and test script contributed by Ben Brewster, Instructor Interim Online Program Director Computer Science Oregon State University<br>
+<i>Instruction and test script contributed by Ben Brewster, Instructor Interim Online Program Director Computer Science Oregon State University</i><br>
 <h1>Overview</h1>
 This project is split up into two programs. The first program (hereafter called the "rooms program") is contained in a file named "<STUDENT ONID USERNAME>.buildrooms.c", which when compiled with the same name (minus the extension) and run creates a series of files that hold descriptions of the in-game rooms and how the rooms are connected.
 The second program (hereafter called the "game") is called "<STUDENT ONID USERNAME>.adventure.c" and when compiled with the same name (minus the extension) and run provides an interface for playing the game using the previously generated rooms.
